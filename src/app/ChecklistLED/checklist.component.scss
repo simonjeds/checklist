@@ -1,0 +1,119 @@
+.titulo {
+  padding-top: 0.5em;
+  position:relative;
+  width: 100%;
+  color: white;
+  text-shadow:2px 2px 1px #369,
+  -2px -2px 1px #369,
+  -2px 2px 1px #369,
+  2px -2px 1px #369;
+  text-align: center;
+  height: 2.2em;
+  font-size: 1.5em;
+}
+
+.tab {
+  margin-left: 10px;
+}
+
+h2 {
+  text-align: center;
+}
+
+
+body, label, fieldset, input, button {
+  font-family: sans-serif;
+  font-size: 0.95em;
+}
+
+fieldset {
+  padding: 10px;
+  margin: 0 auto;
+  border-radius: 5px;
+  border: solid 1px;
+  width: 80%;
+}
+
+legend {
+  font-weight: bold;
+}
+
+.botao {
+  font-size: 1.2em;
+  width: 12em;
+  border: 0;
+  margin-bottom: 1em;
+  color: #FFF;
+  padding: 0.2em 0.6em;
+  box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+}
+
+.botao:hover {
+  background: rgb(0, 153, 255);
+  box-shadow: inset 2px 2px 2px rgba(0,0,0,0.2);
+  text-shadow: none;
+}
+
+.botao, select, label.checkbox { cursor: pointer; }
+
+.retangulo {
+  padding: 2px;
+	width: 7em;
+	height: 1.2em;
+  border: solid 1px black;
+  text-align: center;
+  //float: right;
+  font-weight: bold;
+}
+
+.retangulo_menor {
+  font-size: 1em;
+  width: 6em;
+  border: 0;
+  margin-bottom: 1em;
+  color: #FFF;
+  padding: 0.2em 0.6em;
+  box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+}
+
+.verde{ background: green; color: #FFF;}
+.amarelo{ background: yellow; }
+.vermelho{ background: red; color: #FFF;}
+.roxo{ background: purple; }
+.preto{ background: black; }
+.cinza{ background: grey; }
+
+
+//Tabela com DIVs
+
+.divTable{
+	display: table;
+	width: 100%;
+}
+.divTableRow {
+	display: table-row;
+}
+.divTableHeading {
+	background-color: #EEE;
+	display: table-header-group;
+}
+.divTableCell, .divTableHead {
+	//border: 1px solid #999999;
+	display: table-cell;
+	padding: 3px 10px;
+}
+.divTableHeading {
+	background-color: #EEE;
+	display: table-header-group;
+	font-weight: bold;
+}
+.divTableFoot {
+	background-color: #EEE;
+	display: table-footer-group;
+	font-weight: bold;
+}
+.divTableBody {
+	display: table-row-group;
+}

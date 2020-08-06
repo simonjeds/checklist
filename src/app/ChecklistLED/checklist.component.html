@@ -1,0 +1,89 @@
+
+<br/>
+<h2>C H E C K - L I S T</h2>
+<br/>
+
+<fieldset>
+  <legend>LED</legend>
+
+  <div class="tab">
+    <div >
+      <p><b>Este sistema será usado apenas para a validação do dispositivo de LED e som</b>.</p>
+      <p>Para verificar se o dispositivo de LED está funcionando é necessário desconectá-lo e reconectá-lo, de preferência na parte traseira do gabinete. <br/>
+         Se ao realizar o procedimento a luz do LED não piscar, o chamado deve ser encaminhado para <b>AUTOMAÇÃO</b>. O dispositivo deve ser trocado.</p>
+    </div>
+    <div>
+      IP<br/>
+      <input placeholder="Informe apenas números" [(ngModel)]="this.ip" />&nbsp;
+      <button class="retangulo_menor cinza" (click)="pesquisar()">Pesquisar</button>
+
+    </div>
+    <hr/>
+    <div>
+      <p style="font-weight: bold; ">Filial - {{filial.nomeFantasia}}</p>
+    </div>
+  </div>
+  <br/>
+  <div class="divTable">
+    <div class="divTableBody">
+      <div class="divTableRow" >
+        <div class="divTableCell" style="width: 50%; vertical-align: middle;">
+
+
+          <fieldset>
+            <legend>SinalizadorLuxaFor</legend>
+
+            <div class="divTable">
+              <div class="divTableBody">
+                <div class="divTableRow" >
+                  <div class="divTableCell" style="width: 50%;">
+                    <div>
+                      <p>Se o serviço estiver <b>DESLIGADO</b>, o mesmo deve ser iniciado manualmente.</p>
+                    </div>
+                    <div *ngIf="cor === ''"  class="retangulo">INDEFINIDO</div>
+                    <div *ngIf="cor !== ''" class="{{cor}}">{{statusServicoSinalizadorLuxaFor}}</div>
+                    <div>
+                      <p>Se o serviço estiver <b>LIGADO</b> e ao tentar enviar um sinal de cor e som, não houver resposta, selecione a opção "Reiniciar" pelo menos 1 vez e tente novamente.</p>
+                    </div>
+                  </div>
+                  <div class="divTableCell" style="vertical-align: middle; text-align: center;">
+                    <button class="botao cinza" (click)="reiniciarServicoSinalizadorLuxaFor()">Reiniciar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+
+        </div>
+        <div class="divTableCell" >
+          <p>Para enviar um sinal de cor e som, é só clicar em uma das opções abaixo. <br/>OBS: A opção "<b>Apagado</b>", NÃO emite som.</p>
+          <div class="divTable">
+            <div class="divTableBody" >
+              <div class="divTableRow">
+                <div class="divTableCell"><button class="botao verde" (click)="enviarSinalLEDServidor('00FF00')">Verde</button></div>
+                <div class="divTableCell"><button class="botao amarelo" (click)="enviarSinalLEDServidor('FFFF00')">Amarelo</button></div>
+              </div>
+              <div class="divTableRow">
+                <div class="divTableCell"><button class="botao vermelho" (click)="enviarSinalLEDServidor('FF0000')">Vermelho</button></div>
+                <div class="divTableCell"><button class="botao roxo" (click)="enviarSinalLEDServidor('993399')">Roxo</button></div>
+              </div>
+              <div class="divTableRow">
+                <div class="divTableCell"><button class="botao preto" (click)="enviarSinalLEDServidor('000000')">Apagado</button></div>
+                <div class="divTableCell">&nbsp;</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <br/>
+
+  <div class="tab">
+    <p><b>*</b> Se ao realizar os procedimentos acima, não houver nenhuma resposta positiva, encaminhar o chamado para o <b>DIGITAL</b> do <b>CLIQUE RETIRE.</b></p>
+  </div>
+</fieldset>
+
+
